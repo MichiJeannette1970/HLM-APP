@@ -1,0 +1,12 @@
+HLM KLIMA WEB-APP (PWA) – VERSION 1
+
+1. Der Ordner enthält eine komplette Web-App, nicht eine native iOS-App.
+2. Damit sie auf dem iPhone als App funktioniert, müssen alle Dateien zusammen auf einen HTTPS-Webserver geladen werden (z. B. unter einer Unteradresse der eigenen Website). Ein ZIP allein lässt sich nicht als PWA installieren.
+3. Die HTTPS-Adresse auf dem iPhone in Safari öffnen.
+4. Safari: Teilen > Zum Home-Bildschirm > Hinzufügen.
+5. Danach App vom Home-Bildschirm starten. Nach erstem Laden kann sie dank Service Worker offline genutzt werden.
+6. Berichte/Fotos werden lokal im Browser-Speicher des iPhones gespeichert. Im Bereich 'Datensicherung' regelmässig die JSON-Sicherung exportieren und in Dateien/iCloud speichern. Browserdaten löschen oder Gerät wechseln kann Datenverlust verursachen.
+7. 'PDF erstellen / Drucken' öffnet den iOS-Druckdialog. Dort über die Druckvorschau (aufziehen/teilen) als PDF in Dateien sichern oder teilen.
+8. Vor dem produktiven Einsatz testen: Kamera, mehrere Fotos, Speicherung, PDF und Backup/Restore.
+
+WICHTIG: Die Web-App ist noch nicht veröffentlicht. Sie muss erst auf HTTPS gehostet werden. Keine Cloud-Synchronisation enthalten.
