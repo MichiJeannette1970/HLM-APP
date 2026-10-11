@@ -42,7 +42,8 @@ async function renderPDF(report){
  for(const [label,value] of [['Objekt',report.object],['Adresse',report.address],['Kunde / Auftrag',report.customer],['Datum',report.date]])if(value)text(`${label}: ${value}`);
  y+=25;
  for(let i=0;i<report.photos.length;i++){
-  const photo=report.photos[i],im=await loadImage(photo.data),scale=Math.min(1070/im.width,610/im.height),w=im.width*scale,h=im.height*scale;
+  if(i>0 && i%2===0 && y>270){finish();newPage();}
+  const photo=report.photos[i],im=await loadImage(photo.data),scale=Math.min(1070/im.width,380/im.height),w=im.width*scale,h=im.height*scale;
   room(h+105);text(`Foto ${i+1}`,'bold 25px Arial',38);ctx.drawImage(im,85+(1070-w)/2,y,w,h);y+=h+38;
   if(photo.comment)text(photo.comment);y+=25;
  }
